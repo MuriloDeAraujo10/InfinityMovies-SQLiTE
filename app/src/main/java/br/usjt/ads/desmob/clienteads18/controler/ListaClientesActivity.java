@@ -17,7 +17,7 @@ import br.usjt.ads.desmob.clienteads18.model.ClienteDAO;
 
 public class ListaClientesActivity extends Activity {
     public static final String CLIENTE = "br.usjt.ads.desmob.clienteads18.controllernomedocliente";
-    private ArrayList<Cliente> clientes;
+    private ArrayList<Cliente> clientes, base;
     Activity activity;
 
     @Override
@@ -49,7 +49,7 @@ public class ListaClientesActivity extends Activity {
 
         if(chave != null && chave.length() > 0){
             resultado = new ArrayList<>();
-            ArrayList<Cliente> lista = listaClientes();
+            ArrayList<Cliente> lista = getBase();
             for(Cliente cliente:lista){
                 if(cliente.getNome().toUpperCase().contains(chave.toUpperCase())){
                     resultado.add(cliente);
@@ -57,15 +57,8 @@ public class ListaClientesActivity extends Activity {
             }
             return resultado;
         } else {
-            return listaClientes();
+            return getBase();
         }
     }
-    private ArrayList<Cliente> listaClientes(){
-        ArrayList<Cliente> lista = new ArrayList<>();
-        Cliente[] clientes = ClienteDAO.getClientes();
-        for(Cliente cliente: clientes){
-            lista.add(cliente);
-        }
-        return lista;
-    }
+    private ArrayList<Cliente> getBase() {return this.base;}
 }

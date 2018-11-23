@@ -6,7 +6,7 @@ import java.lang.reflect.Field;
 import br.usjt.ads.desmob.clienteads18.R;
 
 public class Util {
-
+@Deprecated
     public static Drawable getDrawable(Context context, String nome){
         Class<?> c= R.drawable.class;
         try {

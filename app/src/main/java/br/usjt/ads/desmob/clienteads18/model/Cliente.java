@@ -7,6 +7,9 @@ public class Cliente implements Serializable {
     private int id;
     private String nome, email, diretor, elenco, lancamento, descricao, popularidade, duracao;
 
+    public Cliente(){
+
+    }
     public Cliente(int id, String nome, String email, String diretor, String elenco, String lancamento, String descricao, String popularidade,String duracao) {
 
         this.id = id;
