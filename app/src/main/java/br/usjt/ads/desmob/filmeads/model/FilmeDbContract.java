@@ -1,12 +1,12 @@
-package br.usjt.ads.desmob.clienteads18.model;
+package br.usjt.ads.desmob.filmeads.model;
 
 import android.provider.BaseColumns;
 
-public class ClienteDbContract {
-    public ClienteDbContract(){}
+public class FilmeDbContract {
+    public FilmeDbContract(){}
 
-    public static abstract class Cliente implements BaseColumns {
-        public static final String TABLE_NAME = "cliente";
+    public static abstract class Filme implements BaseColumns {
+        public static final String TABLE_NAME = "filme";
         public static final String ID = "id";
         public static final String NOME = "nome";
         public static final String EMAIL = "email";

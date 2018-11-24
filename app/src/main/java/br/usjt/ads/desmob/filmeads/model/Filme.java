@@ -1,16 +1,13 @@
-package br.usjt.ads.desmob.clienteads18.model;
+package br.usjt.ads.desmob.filmeads.model;
 
 import java.io.Serializable;
 
-public class Cliente implements Serializable {
+public class Filme implements Serializable {
 
     private int id;
     private String nome, email, diretor, elenco, lancamento, descricao, popularidade, duracao;
 
-    public Cliente(){
-
-    }
-    public Cliente(int id, String nome, String email, String diretor, String elenco, String lancamento, String descricao, String popularidade,String duracao) {
+    public Filme(int id, String nome, String email, String diretor, String elenco, String lancamento, String descricao, String popularidade, String duracao) {
 
         this.id = id;
         this.nome = nome;
@@ -21,6 +18,10 @@ public class Cliente implements Serializable {
         this.descricao = descricao;
         this.popularidade = popularidade;
         this.duracao = duracao;
+    }
+
+    public Filme() {
+
     }
 
     public int getId() {
@@ -78,7 +79,7 @@ public class Cliente implements Serializable {
 
     @Override
     public String toString() {
-        return "Cliente{" +
+        return "Filme{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
